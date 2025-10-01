@@ -1,0 +1,3 @@
+# smolgrad
+
+An autograd engine
