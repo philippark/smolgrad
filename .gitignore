@@ -1,1 +1,4 @@
 *.out
+src/build
+src/venv
+src/py_engine.egg-info
