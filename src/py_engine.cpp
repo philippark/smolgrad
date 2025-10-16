@@ -1,16 +1,14 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include "engine.h" // Include your C++ header file
+#include "engine.h"
 
 namespace py = pybind11;
 
-// Alias for shared_ptr to Value for cleaner code in pybind11
 using ValuePtr = std::shared_ptr<Value>;
 
 // Define the Python module
-// The module name here must match the module name in setup.py (py_engine)
-PYBIND11_MODULE(py_engine, m) {
-    m.doc() = "Pybind11 wrapper for the C++ Value class (micrograd implementation).";
+PYBIND11_MODULE(smolgrad, m) {
+    m.doc() = "Pybind11 wrapper for the C++ Value class (autograd implementation).";
 
     // Bind the Value class.
     // Since Value uses std::shared_ptr (through std::enable_shared_from_this),
